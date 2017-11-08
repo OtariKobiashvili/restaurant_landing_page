@@ -1,12 +1,13 @@
 import autoprefix from "gulp-autoprefixer";
 import gulp from "gulp";
-import bourbon from "bourbon";
-import neat from "bourbon-neat";
+import bourbon from "node-bourbon";
+import neat from "node-neat";
 import sass from "gulp-sass";
 
+console.log(neat);
 
 const paths = {
-  scss: './public/sass/**/*.scss'
+  scss: './public/sass/**/main.scss'
 }
 gulp.task('sass', () => {
   return gulp.src(paths.scss)
