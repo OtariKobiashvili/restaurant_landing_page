@@ -7,7 +7,7 @@ import sass from "gulp-sass";
 console.log(neat);
 
 const paths = {
-  scss: './public/sass/**/*.scss'
+  scss: './public/sass/**/main.scss'
 }
 gulp.task('sass', () => {
   return gulp.src(paths.scss)
