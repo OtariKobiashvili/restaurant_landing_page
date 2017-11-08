@@ -1,6 +1,26 @@
+const path = require("path");
+
+const paths = {
+  DIST: path.resolve(__dirname, 'dist'),
+  JS: path.resolve(__dirname, 'app')
+};
+
 module.exports = {
-  entry: './src/index.js',
+  entry: path.join(paths.JS, 'index.js'),
   output: {
-      filename: "bundle.js"
+    path: paths.DIST,
+    filename: 'bundle.js',
+  },
+  module: {
+    loaders: [
+      {
+        loader: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/
+      }
+    ]
+  },
+  devServer: {
+    port: 3000
   }
 }
