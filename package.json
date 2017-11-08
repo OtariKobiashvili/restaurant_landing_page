@@ -16,7 +16,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.4",
+    "webpack-stream": "^4.0.0"
   },
   "scripts": {
     "dev": "gulp",
