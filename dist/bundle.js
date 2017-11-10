@@ -70,9 +70,16 @@
 "use strict";
 
 
-var helloWorld = "hello world!";
+var navToggle = document.querySelector(".nav-mobile a");
+var navMenu = document.querySelector(".navbar ul");
 
-console.log(helloWorld);
+navToggle.addEventListener("click", function (event) {
+  toggle(navMenu, "active");
+});
+
+function toggle(el, className) {
+  el.classList.toggle(className);
+}
 
 /***/ })
 /******/ ]);

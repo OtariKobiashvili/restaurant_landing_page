@@ -11,6 +11,7 @@ module.exports = {
     path: paths.DIST,
     filename: 'bundle.js',
   },
+  watch: true,
   module: {
     loaders: [
       {
@@ -21,6 +22,7 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 3000
+    port: 3000,
+    inline: true
   }
 }
