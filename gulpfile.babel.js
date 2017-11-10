@@ -21,12 +21,7 @@ gulp.task('sass', () => {
       includePaths: [bourbon.includePaths, neat.includePaths]
     }).on('error', sass.logError))
     .pipe(autoprefix("last 2 versions"))
-    .pipe(gulp.dest('./public/css/'))
-});
-
-//watch for sass changes, then do sass task
-gulp.task("watch-sass", () => {
-  gulp.watch('./public/sass/**/*.scss',['sass']);
+    .pipe(gulp.dest('./dist'))
 });
 
 //bundle js to dist folder
@@ -36,26 +31,28 @@ gulp.task("webpack", () => {
     .pipe(gulp.dest('./dist'));
 });
 
-//watch for js changes in app/index.js then do webpack task
-gulp.task("watch-app", ()=> {
-  gulp.watch("./app/index.js", ["webpack"])
+gulp.task("watch", ()=> {
+  gulp.watch("./app/index.js", ['webpack']);
+  gulp.watch('./public/sass/**/*.scss',['sass']);
 });
 
 //webpack Server
-gulp.task('webpack-dev-server', (c) => {
+gulp.task('webpack-dev-server', () => {
   let myConfig = Object.create(webpackConfig);
+  myConfig.devtool = 'eval';
 
   // Start a webpack-dev-server
   new WebpackDevServer(webpack(myConfig), {
-      stats: {
-        colors: true
-      }
-  }).listen(myConfig.devServer.port, 'localhost', function (err) {
-      if (err) {
-        throw new gutil.PluginError('webpack-dev-server', err);
-      }
-      gutil.log('[webpack-dev-server]', `http://localhost:${myConfig.devServer.port}/index.html`);
+    publicPath: "/" + myConfig.output.publicPath,
+    stats: {
+      colors: true
+    }
+  }).listen(myConfig.devServer.port, 'localhost', (err) => {
+    if (err) {
+      throw new gutil.PluginError('webpack-dev-server', err);
+    }
+    gutil.log('[webpack-dev-server]', `http://localhost:${myConfig.devServer.port}/index.html`);
   });
 });
 
-gulp.task('default',["watch-app", 'webpack-dev-server', "watch-sass"]);
+gulp.task('default',['webpack-dev-server', "watch"]);
