@@ -1,16 +1,73 @@
 @import "bourbon";
 @import "neat";
 @import "reset.scss";
+@import "variables.scss";
+
+html {
+  height: 100%;
+}
 
 body {
   background-color: whitesmoke;
-  color: #2b2b2b;
+  color: #555;
+  font-family: $font-stack;
+  height: 100%;
 }
 
-.default-neat-grid {
+.navbar {
   @include grid-container;
+  @include padding(25px 5px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  a {
+    color: $wht;
+    text-decoration: none;
+  }
+  h3 {
+    @include grid-column(2);
+  }
+  ul {
+    @include grid-column(10);
+    text-align: right;
+    margin-left: 0;
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+      a {
+        font-size: .75em;
+        font-weight: 600;
+        &:hover {
+          opacity: .8;
+          transition: .1s ease-in;
+        }
+        span {
+          margin-left: 15px;
+          margin-right: 15px;
+          opacity: .6;
+        }
+      }
+    }
+  }
 }
 
-.default-neat-grid__a-single-column {
-  @include grid-column(1);
+.hero {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.3) 25%, rgba(0,0,0,.1)), url(../public/assets/herobg.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 625px;
+  color: $wht;
+  h1 {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.4em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+    span {
+      letter-spacing: 7.5px;
+    }
+  }
 }
