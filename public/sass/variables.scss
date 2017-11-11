@@ -1,4 +1,9 @@
 $font-stack: Open Sans, sans-serif;
+$header-font: 'Dancing Script', cursive;
 $wht: #fff;
 $section-bg: #F6F4F1;
 $breakpoint: 800px;
+$custom-grid: (
+  columns: 12,
+  gutter: 0px,
+);
