@@ -77,6 +77,7 @@ navToggle.addEventListener("click", function (event) {
   toggle(navMenu, "active");
 }, false);
 
+window.addEventListener("load", animateOnScroll, false);
 window.addEventListener("scroll", animateOnScroll, false);
 
 function animateOnScroll() {
@@ -108,9 +109,8 @@ function animateElements(els, animation) {
  */
 function isScrolledIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
-  var elemBottom = el.getBoundingClientRect().bottom;
 
-  var isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+  var isVisible = elemTop >= 0 && elemTop <= window.innerHeight;
   return isVisible;
 }
 
