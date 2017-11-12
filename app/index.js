@@ -1,7 +1,7 @@
 let navToggle = document.querySelector(".nav-mobile a");
 let navMenu = document.querySelector(".navbar ul");
 
-navToggle.addEventListener("click", (event) => {
+navToggle.addEventListener("click", () => {
   toggle(navMenu, "active");
 }, false);
 
