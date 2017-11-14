@@ -1,7 +1,7 @@
 {
   "name": "restaurant_landing_page",
   "version": "1.0.0",
-  "description": "Landing page for fictional restuarant",
+  "description": "Landing page for fictional restaurant",
   "main": "index.js",
   "dependencies": {
     "node-bourbon": "^4.2.8",
