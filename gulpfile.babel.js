@@ -1,6 +1,7 @@
 import autoprefix from "gulp-autoprefixer";
 import gulp from "gulp";
 import gutil from "gulp-util";
+import imagemin from "gulp-imagemin";
 import bourbon from "node-bourbon";
 import neat from "node-neat";
 import sass from "gulp-sass";
@@ -31,6 +32,12 @@ gulp.task("webpack", () => {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task("optimize-images", () => {
+  gulp.src('public/assets/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/assets'))
+})
+
 gulp.task("watch", ()=> {
   gulp.watch("./app/index.js", ['webpack']);
   gulp.watch('./public/sass/**/*.scss',['sass']);
@@ -55,4 +62,4 @@ gulp.task('webpack-dev-server', () => {
   });
 });
 
-gulp.task('default',['webpack-dev-server', "watch"]);
+gulp.task('default',['webpack-dev-server', "watch", "optimize-images"]);
