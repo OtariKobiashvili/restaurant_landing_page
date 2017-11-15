@@ -30,14 +30,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 html {
   height: 100%; }
 
 body {
-  background-color: whitesmoke;
+  background-color: #F6F4F1;
   color: #555;
   font-family: Open Sans, sans-serif;
-  height: 100%; }
+  height: 100%;
+  -webkit-font-smoothing: antialiased; }
 
 .navbar {
   padding: 25px 5px;
@@ -51,10 +56,12 @@ body {
   .navbar a {
     color: #fff;
     text-decoration: none; }
-  .navbar h3 {
+  .navbar h4 {
     width: calc(16.66667% - 23.33333px);
     float: left;
-    margin-left: 20px; }
+    margin-left: 20px;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.75em; }
   .navbar .nav-mobile {
     display: none;
     position: absolute;
@@ -100,13 +107,15 @@ body {
     float: left;
     margin-left: 20px;
     text-align: right;
-    margin-left: 0; }
+    margin-left: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
     .navbar ul li {
       display: inline-block;
       text-transform: uppercase; }
       .navbar ul li a {
         font-size: .75em;
-        font-weight: 600; }
+        font-weight: 700; }
         .navbar ul li a:hover {
           opacity: .8;
           -webkit-transition: .1s ease-in;
@@ -117,11 +126,12 @@ body {
           opacity: .6; }
 
 .wrapper {
-  max-width: 600px; }
+  max-width: 750px;
+  margin: 0 auto; }
 
 .hero {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(25%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.1))), url(../public/assets/herobg.jpg);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0.1)), url(../public/assets/herobg.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(25%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1))), url(../public/assets/herobg.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1)), url(../public/assets/herobg.jpg);
   background-position: center center;
   background-size: cover;
   height: 625px;
@@ -131,15 +141,87 @@ body {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    margin: 0 auto; }
+            transform: translateY(-50%); }
     .hero .wrapper h1 {
-      font-size: 2.45em;
+      font-size: 3.5em;
       text-transform: uppercase;
       font-weight: 700;
-      line-height: 1.5; }
+      line-height: 1.5;
+      font-family: "Dancing Script", cursive; }
       .hero .wrapper h1 span {
-        letter-spacing: 8.3px; }
+        letter-spacing: 8.3px;
+        font-family: Open Sans, sans-serif;
+        font-size: .85em; }
+
+.info {
+  background: #F6F4F1;
+  max-height: 420px; }
+  .info .wrapper {
+    position: relative;
+    top: -35px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+    .info .wrapper .img {
+      height: 240px;
+      background-position: center center;
+      background-size: cover; }
+    .info .wrapper aside {
+      background: #fff;
+      height: 240px;
+      text-align: center;
+      line-height: 1.5; }
+      .info .wrapper aside h3 {
+        margin-bottom: 10px;
+        font-size: 2.5em;
+        font-family: "Dancing Script", cursive; }
+      .info .wrapper aside p {
+        font-size: .75em;
+        margin-bottom: 15px; }
+    .info .wrapper .reservations::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .info .wrapper .reservations .img {
+      width: calc(66.66667%);
+      float: left;
+      margin-left: 0px;
+      background-image: url(../public/assets/reservations.jpg); }
+    .info .wrapper .reservations aside {
+      padding: 15px;
+      width: calc(33.33333%);
+      float: left;
+      margin-left: 0px; }
+      .info .wrapper .reservations aside button {
+        margin-top: 10px;
+        text-transform: uppercase;
+        padding: 10px 28px;
+        font-size: .85em;
+        background-color: transparent;
+        border: 2px solid #E8E3DC;
+        color: #D1C0AD;
+        font-weight: 700;
+        cursor: pointer;
+        -webkit-transition: 100ms ease-in-out;
+        transition: 100ms ease-in-out; }
+        .info .wrapper .reservations aside button:hover {
+          -webkit-transform: scale(1.05);
+                  transform: scale(1.05); }
+    .info .wrapper .about::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .info .wrapper .about .img {
+      width: calc(33.33333%);
+      float: left;
+      margin-left: 0px;
+      background-image: url(../public/assets/about.jpg); }
+    .info .wrapper .about aside {
+      width: calc(66.66667%);
+      float: left;
+      margin-left: 0px;
+      padding: 30px; }
+      .info .wrapper .about aside h3 {
+        margin-bottom: 5px; }
 
 @media only screen and (max-width: 800px) {
   .navbar {
