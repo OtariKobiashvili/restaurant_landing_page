@@ -1,0 +1,16 @@
+.animate-in {
+  animation-name: animate-in;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes animate-in {
+  50% {
+    opacity: .5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}

@@ -30,6 +30,32 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.animate-in {
+  -webkit-animation-name: animate-in;
+          animation-name: animate-in;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in; }
+
+@-webkit-keyframes animate-in {
+  50% {
+    opacity: .5; }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1; } }
+
+@keyframes animate-in {
+  50% {
+    opacity: .5; }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1; } }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -147,11 +173,22 @@ body {
       text-transform: uppercase;
       font-weight: 700;
       line-height: 1.5;
-      font-family: "Dancing Script", cursive; }
-      .hero .wrapper h1 span {
-        letter-spacing: 8.3px;
-        font-family: Open Sans, sans-serif;
-        font-size: .85em; }
+      font-family: "Dancing Script", cursive;
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+      opacity: 0; }
+    .hero .wrapper h2 {
+      letter-spacing: 8.3px;
+      font-family: Open Sans, sans-serif;
+      font-size: 2.75em;
+      -webkit-animation-delay: 200ms;
+              animation-delay: 200ms;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 1.5;
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+      opacity: 0; }
 
 .info {
   background: #F6F4F1;
@@ -159,17 +196,26 @@ body {
   .info .wrapper {
     position: relative;
     top: -35px;
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+    overflow: hidden; }
     .info .wrapper .img {
       height: 240px;
       background-position: center center;
-      background-size: cover; }
+      background-size: cover;
+      -webkit-animation-duration: 500ms;
+              animation-duration: 500ms; }
+      .info .wrapper .img:nth-child(2) {
+        -webkit-animation-delay: 400ms;
+                animation-delay: 400ms; }
     .info .wrapper aside {
       background: #fff;
       height: 240px;
       text-align: center;
-      line-height: 1.5; }
+      line-height: 1.5;
+      -webkit-animation-duration: 500ms;
+              animation-duration: 500ms; }
+      .info .wrapper aside:first-child {
+        -webkit-animation-delay: 400ms;
+                animation-delay: 400ms; }
       .info .wrapper aside h3 {
         margin-bottom: 10px;
         font-size: 2.5em;
@@ -185,9 +231,15 @@ body {
       width: calc(66.66667%);
       float: left;
       margin-left: 0px;
-      background-image: url(../public/assets/reservations.jpg); }
+      background-image: url(../public/assets/reservations.jpg);
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+      opacity: 0; }
     .info .wrapper .reservations aside {
       padding: 15px;
+      -webkit-transform: translateY(-30px);
+              transform: translateY(-30px);
+      opacity: 0;
       width: calc(33.33333%);
       float: left;
       margin-left: 0px; }
@@ -214,12 +266,18 @@ body {
       width: calc(33.33333%);
       float: left;
       margin-left: 0px;
+      -webkit-transform: translateY(-30px);
+              transform: translateY(-30px);
+      opacity: 0;
       background-image: url(../public/assets/about.jpg); }
     .info .wrapper .about aside {
       width: calc(66.66667%);
       float: left;
       margin-left: 0px;
-      padding: 30px; }
+      padding: 30px;
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+      opacity: 0; }
       .info .wrapper .about aside h3 {
         margin-bottom: 5px; }
 
