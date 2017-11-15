@@ -164,6 +164,7 @@ body {
 .hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(25%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1))), url(./assets/herobg.jpg);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1)), url(./assets/herobg.jpg);
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 625px;
@@ -238,6 +239,7 @@ body {
       float: left;
       margin-left: 0px;
       background-image: url(./assets/reservations.jpg);
+      background-repeat: no-repeat;
       -webkit-transform: translateY(30px);
               transform: translateY(30px);
       opacity: 0; }
@@ -275,7 +277,8 @@ body {
       -webkit-transform: translateY(-30px);
               transform: translateY(-30px);
       opacity: 0;
-      background-image: url(./assets/about.jpg); }
+      background-image: url(./assets/about.jpg);
+      background-repeat: no-repeat; }
     .info .wrapper .about aside {
       width: calc(66.66667%);
       float: left;
@@ -289,6 +292,7 @@ body {
 
 .specialties .parallax-bg {
   background-image: url(./assets/parallax_bg1.jpg);
+  background-repeat: no-repeat;
   height: 450px; }
   .specialties .parallax-bg h3 {
     color: white;
@@ -300,11 +304,15 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 8px; }
+  .specialties .parallax-bg:nth-child(3) {
+    background-image: url(./assets/parallax_bg2.jpg);
+    background-repeat: no-repeat;
+    height: 400px; }
 
 .specialties .wrapper {
   height: 400px;
   position: relative;
-  top: -25px;
+  top: -20px;
   background: transparent; }
 
 .specialties .specials::after {
@@ -355,7 +363,7 @@ body {
     background: #fff;
     padding: 20px;
     text-align: center;
-    height: 215px; }
+    height: 225px; }
     .specialties .specials .special .special-info h4 {
       font-weight: 700;
       text-transform: uppercase;
@@ -374,7 +382,7 @@ body {
       margin-top: 20px;
       display: block; }
   .specialties .specials .special .img {
-    height: 215px;
+    height: 225px;
     background-position: center;
     background-size: cover; }
 
