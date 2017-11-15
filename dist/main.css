@@ -151,15 +151,15 @@ body {
       text-transform: uppercase; }
       .navbar ul li a {
         font-size: .75em;
-        font-weight: 700; }
+        font-weight: 700;
+        -webkit-transition: .1s ease-in;
+        transition: .1s ease-in; }
         .navbar ul li a:hover {
-          opacity: .8;
-          -webkit-transition: .1s ease-in;
-          transition: .1s ease-in; }
-        .navbar ul li a span {
-          margin-left: 15px;
-          margin-right: 15px;
-          opacity: .6; }
+          opacity: .8; }
+      .navbar ul li span {
+        margin-left: 10px;
+        margin-right: 10px;
+        opacity: .95; }
 
 .hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(25%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1))), url(./assets/herobg.jpg);
@@ -413,5 +413,5 @@ body {
           line-height: 30px;
           padding-right: 15px;
           padding-left: 15px; }
-          .navbar ul li a span {
-            display: none; } }
+        .navbar ul li span {
+          display: none; } }

@@ -109,15 +109,15 @@ body {
       a {
         font-size: .75em;
         font-weight: 700;
+        transition: .1s ease-in;
         &:hover {
           opacity: .8;
-          transition: .1s ease-in;
         }
-        span {
-          margin-left: 15px;
-          margin-right: 15px;
-          opacity: .6;
-        }
+      }
+      span {
+        margin-left: 10px;
+        margin-right: 10px;
+        opacity: .95;
       }
     }
   }
@@ -393,9 +393,9 @@ body {
           line-height: 30px;
           padding-right: 15px;
           padding-left: 15px;
-          span {
-            display: none;
-          }
+        }
+        span {
+          display: none;
         }
       }
     }
