@@ -11,9 +11,13 @@ window.addEventListener("scroll", animateOnScroll, false);
 function animateOnScroll(){
   let infoAside = document.querySelectorAll(".info aside");
   let infoImg = document.querySelectorAll(".info .img");
+  let specialsInfo = document.querySelectorAll(".special .special-info");
+  let specialsImages = document.querySelectorAll(".special .img");
 
   animateElements(infoAside, "animate-in");
   animateElements(infoImg, "animate-in");
+  animateElements(specialsImages, "animate-in");
+  animateElements(specialsInfo, "animate-in");
 }
 
 /**

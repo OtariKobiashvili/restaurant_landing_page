@@ -73,7 +73,7 @@
 var navToggle = document.querySelector(".nav-mobile a");
 var navMenu = document.querySelector(".navbar ul");
 
-navToggle.addEventListener("click", function (event) {
+navToggle.addEventListener("click", function () {
   toggle(navMenu, "active");
 }, false);
 
@@ -83,9 +83,13 @@ window.addEventListener("scroll", animateOnScroll, false);
 function animateOnScroll() {
   var infoAside = document.querySelectorAll(".info aside");
   var infoImg = document.querySelectorAll(".info .img");
+  var specialsInfo = document.querySelectorAll(".special .special-info");
+  var specialsImages = document.querySelectorAll(".special .img");
 
   animateElements(infoAside, "animate-in");
   animateElements(infoImg, "animate-in");
+  animateElements(specialsImages, "animate-in");
+  animateElements(specialsInfo, "animate-in");
 }
 
 /**
