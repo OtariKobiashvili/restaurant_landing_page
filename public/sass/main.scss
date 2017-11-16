@@ -10,10 +10,10 @@
 
 html {
   height: 100%;
+  background: $wht;
 }
 
 body {
-  background-color: $section-bg;
   color: #555;
   font-family: $font-stack;
   height: 100%;
@@ -250,6 +250,7 @@ body {
 }
 
 .specialties {
+  background: $section-bg;
   .parallax-bg {
     background-image: url(./assets/parallax_bg1.jpg);
     background-repeat: no-repeat;
@@ -349,7 +350,7 @@ body {
           margin: 27.5px 0;
         }
         strong {
-          color: #B29879;
+          color: $emphasis-color;
           font-weight: 700;
           text-transform: uppercase;
           font-size: .9em;
@@ -364,6 +365,63 @@ body {
       }
     }
 
+  }
+}
+
+.menu {
+  background: $wht;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+  h3 {
+    margin: 10px 0;
+    font-size: 2.25em;
+    font-family: $header-font;
+  }
+  hr {
+    border-width: 1px;
+    border-color: $emphasis-color;
+    border-style: solid;
+    width: 30px;
+  }
+  p:nth-child(3) {
+    margin-top: 50px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700;
+    color: #CBCBCB;
+  }
+  .menu-items {
+    @include grid-container;
+    .menu-item {
+      @include grid-column(6, $menu-grid);
+      text-align: left;
+      position: relative;
+      margin-bottom: 25px;
+      h5 {
+        font-size: 1em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: .75em;
+        line-height: 1.5;
+        max-width: 332px;
+      }
+      span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5em;
+        font-family: $header-font;
+        color: $emphasis-color;
+      }
+    }
   }
 }
 
