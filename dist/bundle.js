@@ -70,10 +70,8 @@
 "use strict";
 
 
-var navToggle = document.querySelector(".nav-mobile a");
-var navMenu = document.querySelector(".navbar ul");
-
-navToggle.addEventListener("click", function () {
+document.querySelector(".nav-mobile a").addEventListener("click", function () {
+  var navMenu = document.querySelector(".navbar ul");
   toggle(navMenu, "active");
 }, false);
 
