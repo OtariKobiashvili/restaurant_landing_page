@@ -70,10 +70,8 @@
 "use strict";
 
 
-var navToggle = document.querySelector(".nav-mobile a");
-var navMenu = document.querySelector(".navbar ul");
-
-navToggle.addEventListener("click", function () {
+document.querySelector(".nav-mobile a").addEventListener("click", function () {
+  var navMenu = document.querySelector(".navbar ul");
   toggle(navMenu, "active");
 }, false);
 
@@ -81,15 +79,19 @@ window.addEventListener("load", animateOnScroll, false);
 window.addEventListener("scroll", animateOnScroll, false);
 
 function animateOnScroll() {
-  var infoAside = document.querySelectorAll(".info aside");
-  var infoImg = document.querySelectorAll(".info .img");
-  var specialsInfo = document.querySelectorAll(".special .special-info");
-  var specialsImages = document.querySelectorAll(".special .img");
+  var infoAside = document.querySelectorAll(".info aside"),
+      infoImg = document.querySelectorAll(".info .img"),
+      menuImages = document.querySelectorAll(".menu img"),
+      menuItems = document.querySelectorAll(".menu-items .menu-item"),
+      specialsImages = document.querySelectorAll(".special .img"),
+      specialsInfo = document.querySelectorAll(".special .special-info");
 
   animateElements(infoAside, "animate-in");
   animateElements(infoImg, "animate-in");
   animateElements(specialsImages, "animate-in");
   animateElements(specialsInfo, "animate-in");
+  animateElements(menuItems, "animate-in");
+  animateElements(menuImages, "animate-in");
 }
 
 /**
