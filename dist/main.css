@@ -402,9 +402,18 @@ body {
     width: 30px; }
   .menu img {
     max-width: 175px;
-    position: absolute;
+    position: absolute; }
+  .menu img.pizza {
     right: 0;
     top: 0; }
+  .menu img.pasta {
+    left: -100px;
+    top: 30%;
+    max-width: 300px; }
+  .menu img.dessert {
+    bottom: 0;
+    max-width: 300px;
+    right: -90px; }
   .menu .menu-type {
     margin-top: 50px;
     margin-bottom: 45px;
