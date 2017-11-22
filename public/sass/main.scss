@@ -392,16 +392,22 @@ body {
   img.pizza {
     right: 0;
     top: 0;
+    transform: translateX(30px);
+    opacity: 0;
   }
   img.pasta {
     left: -100px;
     top: 30%;
     max-width: 300px;
+    transform: translateX(-30px);
+    opacity: 0;
   }
   img.dessert {
     bottom: 0;
     max-width: 300px;
     right: -90px;
+    transform: translateX(30px);
+    opacity: 0;
   }
   .menu-type {
     margin-top: 50px;
@@ -427,6 +433,11 @@ body {
       text-align: left;
       position: relative;
       margin-bottom: 25px;
+      transform: translateY(30px);
+      opacity: 0;
+      &:nth-child(even) {
+        animation-delay: .1s;
+      }
       h5 {
         font-size: 1em;
         letter-spacing: 1px;

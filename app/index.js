@@ -8,15 +8,19 @@ window.addEventListener("load", animateOnScroll, false);
 window.addEventListener("scroll", animateOnScroll, false);
 
 function animateOnScroll(){
-  let infoAside = document.querySelectorAll(".info aside");
-  let infoImg = document.querySelectorAll(".info .img");
-  let specialsInfo = document.querySelectorAll(".special .special-info");
-  let specialsImages = document.querySelectorAll(".special .img");
+  let infoAside = document.querySelectorAll(".info aside"),
+      infoImg = document.querySelectorAll(".info .img"),
+      menuImages = document.querySelectorAll(".menu img"),
+      menuItems = document.querySelectorAll(".menu-items .menu-item"),
+      specialsImages = document.querySelectorAll(".special .img"),
+      specialsInfo = document.querySelectorAll(".special .special-info");
 
   animateElements(infoAside, "animate-in");
   animateElements(infoImg, "animate-in");
   animateElements(specialsImages, "animate-in");
   animateElements(specialsInfo, "animate-in");
+  animateElements(menuItems, "animate-in");
+  animateElements(menuImages, "animate-in");
 }
 
 /**

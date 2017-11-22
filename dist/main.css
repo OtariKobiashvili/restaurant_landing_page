@@ -405,15 +405,24 @@ body {
     position: absolute; }
   .menu img.pizza {
     right: 0;
-    top: 0; }
+    top: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    opacity: 0; }
   .menu img.pasta {
     left: -100px;
     top: 30%;
-    max-width: 300px; }
+    max-width: 300px;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    opacity: 0; }
   .menu img.dessert {
     bottom: 0;
     max-width: 300px;
-    right: -90px; }
+    right: -90px;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    opacity: 0; }
   .menu .menu-type {
     margin-top: 50px;
     margin-bottom: 45px;
@@ -440,7 +449,13 @@ body {
       margin-left: 35px;
       text-align: left;
       position: relative;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+      opacity: 0; }
+      .menu .menu-items .menu-item:nth-child(even) {
+        -webkit-animation-delay: .1s;
+                animation-delay: .1s; }
       .menu .menu-items .menu-item h5 {
         font-size: 1em;
         letter-spacing: 1px;
