@@ -276,6 +276,7 @@ body {
 
 .specialties {
   background: $section-bg;
+  overflow: hidden;
   .parallax-bg {
     background-image: url(./assets/parallax_bg1.jpg);
     background-repeat: no-repeat;
@@ -307,8 +308,10 @@ body {
   .specials {
     @include grid-container;
     .special {
-      @include grid-column(3, $custom-grid);
-
+      @include grid-column(12, $custom-grid);
+      @include grid-media($breakpoint-grid) {
+        @include grid-column(3);
+      }
       &:nth-child(1), &:nth-child(3) {
         .special-info {
           opacity: 0;
@@ -325,10 +328,14 @@ body {
         .special-info {
           transform: translate(20px, 20px);
           opacity: 0;
+          position: relative;
+          top: 225px;
         }
         .img {
           transform: translate(20px, -20px);
           opacity: 0;
+          position: relative;
+          bottom: 225px;
         }
       }
 
@@ -385,7 +392,7 @@ body {
       }
       .img {
         height: 225px;
-        background-position: center;
+        background-position: center center;
         background-size: cover;
       }
     }
@@ -455,7 +462,10 @@ body {
     border-radius: 1px;
     @include grid-container;
     .menu-item {
-      @include grid-column(6, $menu-grid);
+      @include grid-column(12, $menu-grid);
+      @include grid-media($mobile-menu-grid) {
+        @include grid-column(6, $menu-grid);
+      }
       text-align: left;
       position: relative;
       margin-bottom: 25px;
@@ -478,11 +488,10 @@ body {
       }
       span {
         position: absolute;
-        top: 0;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 2.5em;
+        font-size: 2em;
         font-family: $header-font;
         color: $emphasis-color;
       }
@@ -519,6 +528,39 @@ body {
         }
         span {
           display: none;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .specialties {
+    .wrapper {
+      height: 1765px;
+      .specials {
+        .special {
+          &:nth-child(2), &:nth-child(4) {
+            .special-info {
+              top: 0px;
+            }
+            .img {
+              bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu {
+    .menu-items {
+      .menu-item {
+        p {
+          max-width: 90%;
         }
       }
     }

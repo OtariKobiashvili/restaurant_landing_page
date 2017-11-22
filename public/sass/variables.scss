@@ -12,6 +12,11 @@ $menu-grid: (
   columns: 12,
   gutter: 35px
 );
+$mobile-menu-grid: (
+  columns: 12,
+  gutter: 35px,
+  media: 800px
+);
 $header-grid: (
   columns: 12,
   gutter: 0px,
