@@ -70,7 +70,7 @@
 "use strict";
 
 
-document.querySelector(".nav-mobile a").addEventListener("click", function () {
+document.querySelector(".nav-mobile button").addEventListener("click", function () {
   var navMenu = document.querySelector(".navbar ul");
   toggle(navMenu, "active");
 }, false);
@@ -86,12 +86,26 @@ function animateOnScroll() {
       specialsImages = document.querySelectorAll(".special .img"),
       specialsInfo = document.querySelectorAll(".special .special-info");
 
+  navChange();
   animateElements(infoAside, "animate-in");
   animateElements(infoImg, "animate-in");
   animateElements(specialsImages, "animate-in");
   animateElements(specialsInfo, "animate-in");
   animateElements(menuItems, "animate-in");
   animateElements(menuImages, "animate-in");
+}
+
+function navChange() {
+  var navBar = document.querySelector(".nav-mobile"),
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+  if (scrollTop >= 200) {
+    navBar.classList.add("active");
+    console.log("hi");
+  } else {
+    navBar.classList.remove("active");
+    console.log("hi11");
+  }
 }
 
 /**
