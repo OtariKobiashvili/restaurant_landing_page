@@ -99,7 +99,7 @@ function navChange() {
   var navBar = document.querySelector(".nav-mobile"),
       scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-  if (scrollTop >= 200) {
+  if (scrollTop >= 100) {
     navBar.classList.add("active");
   } else {
     navBar.classList.remove("active");
