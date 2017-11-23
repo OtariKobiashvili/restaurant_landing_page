@@ -30,10 +30,8 @@ function navChange() {
 
   if (scrollTop >= 200) {
     navBar.classList.add("active");
-    console.log("hi")
   } else {
     navBar.classList.remove("active");
-    console.log("hi11")
   }
 }
 
