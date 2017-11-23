@@ -1,5 +1,5 @@
 
-document.querySelector(".nav-mobile a").addEventListener("click", () => {
+document.querySelector(".nav-mobile button").addEventListener("click", () => {
   let navMenu = document.querySelector(".navbar ul");
   toggle(navMenu, "active");
 }, false);
@@ -15,12 +15,24 @@ function animateOnScroll(){
       specialsImages = document.querySelectorAll(".special .img"),
       specialsInfo = document.querySelectorAll(".special .special-info");
 
+  navChange();
   animateElements(infoAside, "animate-in");
   animateElements(infoImg, "animate-in");
   animateElements(specialsImages, "animate-in");
   animateElements(specialsInfo, "animate-in");
   animateElements(menuItems, "animate-in");
   animateElements(menuImages, "animate-in");
+}
+
+function navChange() {
+  let navBar = document.querySelector(".nav-mobile"),
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+  if (scrollTop >= 100) {
+    navBar.classList.add("active");
+  } else {
+    navBar.classList.remove("active");
+  }
 }
 
 /**
